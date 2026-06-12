@@ -1,0 +1,177 @@
+:root {
+    --bg-dark: #0f172a;
+    --accent-blue: #06b6d4;
+    --accent-teal: #2dd4bf;
+    --white: #ffffff;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: var(--bg-dark);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+
+
+header {
+    background-color: var(--bg-dark);
+    color: var(--white);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 5px solid var(--accent-blue);
+}
+
+section {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    animation: aparecer 1s ease;
+}
+
+article {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+button {
+    cursor: pointer;
+    background: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+button:hover {
+    animation: latir 0.8s infinite;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #d69a18;
+    border: 2px solid #06b6d4;
+    box-sizing: border-box;
+}
+
+
+@keyframes latir {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+
+article {
+    border: 3px solid var(--accent-blue);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background: #ffffff;
+    box-shadow: 10px 10px 0px var(--bg-dark);
+    transition: 0.3s;
+}
+
+article:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 15px 15px 0px var(--accent-teal);
+}
+
+.label-tag {
+    background: var(--bg-dark);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 900px) {
+    section {
+        padding: 20px;
+        width: 95%;
+    }
+
+    header {
+        padding: 1.5rem;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    
+    section {
+        padding: 15px;
+    }
+
+    
+    button {
+        width: 100%;
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    
+    body {
+        border-right: 10px solid var(--accent);
+    }
+
+    
+    .card-container {
+        padding: 15px;
+        box-shadow: 5px 5px 0px var(--bg-dark);
+    }
+}
