@@ -46,11 +46,11 @@ Este proyecto es una plataforma interactiva diseñada para la administración de
 ---
 # Capturas del proyecto
 
-![Captura 1](PROYECTOJS/capturas/1.png)
-![Captura 2](PROYECTOJS/capturas/2.png)
-![Captura 3](PROYECTOJS/capturas/3.png)
-![Captura 4](PROYECTOJS/capturas/4.png)
-![Captura 5](PROYECTOJS/capturas/5.png)
-![Captura 6](PROYECTOJS/capturas/6.png)
-![Captura 7](PROYECTOJS/capturas/7.png)
+![Captura 1](PROYECTOJS/CAPTURAS/1.png)
+![Captura 2](PROYECTOJS/CAPTURAS/2.png)
+![Captura 3](PROYECTOJS/CAPTURAS/3.png)
+![Captura 4](PROYECTOJS/CAPTURAS/4.png)
+![Captura 5](PROYECTOJS/CAPTURAS/5.png)
+![Captura 6](PROYECTOJS/CAPTURAS/6.png)
+![Captura 7](PROYECTOJS/CAPTURAS/7.png)
 
