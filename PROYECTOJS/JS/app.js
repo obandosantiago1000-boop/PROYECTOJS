@@ -4,7 +4,7 @@ botonEstudiantes.addEventListener("click", function () {
     const contra = Number(prompt("Ingrese su contraseña:"));
 
     if (contra === 1234) {
-        window.location.href = "http://127.0.0.1:5500/PROYECTOJS/HTML/index1.html";
+        window.location.href = "http://127.0.0.1:5500/HTML/index1.html";
     } else {
         alert("Incorrecto");
     }
@@ -16,7 +16,7 @@ botonConductores.addEventListener("click", function () {
     const contras = Number(prompt("Ingrese su contraseña:"));
 
     if (contras === 12345) {
-        window.location.href = "http://127.0.0.1:5500/PROYECTOJS/HTML/index2.html";
+        window.location.href = "http://127.0.0.1:5500/HTML/index2.html";
     } else {
         alert("Incorrecto");
     }
@@ -28,7 +28,7 @@ botonRutas.addEventListener("click", function () {
     const contrase = Number(prompt("Ingrese su contraseña:"));
 
     if (contrase === 123456) {
-        window.location.href = "http://127.0.0.1:5500/PROYECTOJS/HTML/index3.html";
+        window.location.href = "http://127.0.0.1:5500/HTML/index3.html";
     } else {
         alert("Incorrecto");
     }
