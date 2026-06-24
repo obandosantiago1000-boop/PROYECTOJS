@@ -4,7 +4,7 @@ botonEstudiantes.addEventListener("click", function () {
     const contra = Number(prompt("Ingrese su contraseña:"));
 
     if (contra === 1234) {
-        window.location.href = "";
+        window.location.href = "http://127.0.0.1:5501/HTML/index1.html";
     } else {
         alert("Incorrecto");
     }
@@ -16,11 +16,12 @@ botonConductores.addEventListener("click", function () {
     const contras = Number(prompt("Ingrese su contraseña:"));
 
     if (contras === 12345) {
-        window.location.href = "";
+        window.location.href = "http://127.0.0.1:5501/HTML/index2.html";
     } else {
         alert("Incorrecto");
     }
 });
+
 
 const botonRutas = document.getElementById("3");
 
@@ -28,7 +29,7 @@ botonRutas.addEventListener("click", function () {
     const contrase = Number(prompt("Ingrese su contraseña:"));
 
     if (contrase === 123456) {
-        window.location.href = "";
+        window.location.href = "http://127.0.0.1:5501/HTML/index3.html";
     } else {
         alert("Incorrecto");
     }
@@ -74,3 +75,171 @@ async function obtenerClima() {
 }
 
 obtenerClima()
+
+
+
+let tarjetas = JSON.parse(
+
+    localStorage.getItem("tarjetas")
+
+)
+    ||
+    [];
+
+
+
+const formulario =
+    document.getElementById("formulario");
+
+
+const titulo =
+    document.getElementById("titulo");
+
+
+const contenedor =
+    document.getElementById("contenedor");
+
+
+function guardar() {
+
+
+    localStorage.setItem(
+
+        "tarjetas",
+
+        JSON.stringify(tarjetas)
+
+    );
+
+
+}
+
+
+
+
+function mostrarTarjetas(lista) {
+
+
+    contenedor.innerHTML = "";
+
+
+    lista.forEach(tarjeta => {
+
+        const div =
+            document.createElement("div");
+        div.classList.add(
+
+            "card"
+        );
+
+
+
+
+        div.innerHTML = `
+
+
+
+<h3>
+
+${tarjeta.titulo}
+
+</h3>
+
+
+<button
+class="eliminar"
+onclick="eliminar(${tarjeta.id})">
+
+
+Eliminar
+
+
+</button>
+
+
+
+`;
+
+        contenedor.appendChild(div);
+
+    });
+
+
+
+}
+
+
+
+
+
+formulario.addEventListener(
+
+    "submit",
+
+    (e) => {
+
+
+        e.preventDefault();
+
+
+
+const encontrado=tarjetas.find(j => j===titulo.value)
+if (encontrado===titulo.value){
+   alert("Nombre ya utilizado")
+}
+else{
+
+        const nuevaTarjeta = {
+
+
+            id: Date.now(),
+
+
+            titulo:
+
+                titulo.value
+        };
+
+
+        tarjetas.push(nuevaTarjeta);
+
+
+        guardar();
+
+
+        mostrarTarjetas(tarjetas);
+
+
+        formulario.reset();
+
+
+    }
+}
+
+);
+
+
+
+
+function eliminar(id) {
+
+    tarjetas = tarjetas.filter(
+
+        tarjeta => tarjeta.id !== id
+    );
+
+    guardar();
+
+    mostrarTarjetas(tarjetas);
+
+}
+
+
+
+
+
+mostrarTarjetas(tarjetas);
+
+
+
+
